@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><ns3:EnviarLoteRpsResposta xmlns:ns2="http://www.ginfes.com.br/tipos_v03.xsd" xmlns:ns3="http://www.ginfes.com.br/servico_enviar_lote_rps_resposta_v03.xsd"><ns3:NumeroLote>4122017133356</ns3:NumeroLote><ns3:DataRecebimento>2017-12-04T13:34:12</ns3:DataRecebimento><ns3:Protocolo>188908527</ns3:Protocolo></ns3:EnviarLoteRpsResposta>

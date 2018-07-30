@@ -1,0 +1,117 @@
+unit uDmConexao;
+
+interface
+
+uses
+  Windows, SysUtils, Classes, DB, Messages, Variants, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, Mask, DBCtrls, ExtCtrls, ComCtrls, IniFiles,
+  FireDAC.Phys.FB, FireDAC.Phys.MySQL, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def,
+  FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.Phys.MySQLDef,
+  FireDAC.Comp.Client, FireDAC.VCLUI.Wait, FireDAC.Comp.UI, FireDAC.Phys.PGDef,
+  FireDAC.Phys.PG;
+
+type
+  TDmConexao = class(TDataModule)
+    Conexao: TFDConnection;
+    Transacao: TFDTransaction;
+    FDGUIxWaitCursor: TFDGUIxWaitCursor;
+    FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink;
+    FDPhysPgDriverLink1: TFDPhysPgDriverLink;
+    procedure DataModuleCreate(Sender: TObject);
+    procedure DataModuleDestroy(Sender: TObject);
+  private
+    ArqIni: TIniFile;
+    sHost, sDatabase, sUser, sPass: String;
+    procedure CriaArqIni;
+    procedure LeArqIni;
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  DmConexao: TDmConexao;
+
+implementation
+
+uses
+  uLibrary;
+
+{$R *.dfm}
+
+procedure TDmConexao.DataModuleCreate(Sender: TObject);
+var
+  aux: String;
+begin
+  //
+  try
+    // verifica arquivo de configuração de acesso aos dados
+    aux := ExtractFilePath(Application.ExeName) + 'config.ini';
+    if not FileExists(aux) then
+      CriaArqIni;
+    LeArqIni;
+    // realiza conexao com o banco de dados
+    Conexao.Connected := false;
+    Conexao.Params.Values['Hostname'] := sHost;
+    Conexao.Params.Values['Database'] := sDatabase;
+    Conexao.Params.Values['User_Name'] := sUser;
+    Conexao.Params.Values['Password'] := sPass;
+    Conexao.Connected := true;
+    // atribui variavel de controle
+    ConexaoDados := Conexao;
+  except
+    on Exc: Exception do
+    begin
+      MessageDlg('Erro: ' + Exc.Message, mtWarning, [mbOK], 0);
+      Application.Terminate;
+    end;
+  end;
+
+end;
+
+procedure TDmConexao.CriaArqIni;
+var
+  AuxChave: String;
+begin
+  AuxChave := Criptografa('198208', 23);
+  ArqIni := TIniFile.Create(ExtractFilePath(Application.ExeName) + 'config.ini');
+  ArqIni.WriteString('DADOS', 'HOSTNAME', 'localhost');
+  ArqIni.WriteString('DADOS', 'DATABASE', 'gerencial');
+  ArqIni.WriteString('DADOS', 'USUARIO', 'root');
+  ArqIni.WriteString('DADOS', 'SENHA', 'root');
+
+  ArqIni.WriteString('DADOS', 'PATHV15', ExtractFilePath(Application.ExeName) + 'Dados\BASE.FDB');
+  ArqIni.WriteString('DADOS', 'USUARIOV15', 'SYSDBA');
+  ArqIni.WriteString('DADOS', 'SENHAV15', 'masterkey');
+
+  ArqIni.WriteString('DADOS', 'DRVCVE', AuxChave);
+  ArqIni.WriteInteger('DADOS', 'DRVBAT', 0);
+  ArqIni.Free;
+end;
+
+procedure TDmConexao.LeArqIni;
+var
+  AuxChave: String;
+begin
+  ArqIni := TIniFile.Create(ExtractFilePath(Application.ExeName) + 'config.ini');
+  sHost := ArqIni.ReadString('DADOS', 'HOSTNAME', 'localhost');
+  sDatabase := ArqIni.ReadString('DADOS', 'DATABASE', 'gerencial');
+  sUser := ArqIni.ReadString('DADOS', 'USUARIO', 'SYSDBA');
+  sPass := ArqIni.ReadString('DADOS', 'SENHA', 'masterkey');
+
+  AuxChave := ArqIni.ReadString('DADOS', 'DRVCVE', '');
+  sBloqueio := ArqIni.ReadInteger('DADOS', 'DRVBAT', 0);
+  ArqIni.Free;
+
+  sIDBloqueio := StrToInt(Criptografa(AuxChave, 23));
+
+end;
+
+procedure TDmConexao.DataModuleDestroy(Sender: TObject);
+begin
+  Conexao.Connected := false;
+
+end;
+
+end.

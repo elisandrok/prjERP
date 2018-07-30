@@ -1,0 +1,39 @@
+object DmConexao: TDmConexao
+  OldCreateOrder = False
+  OnCreate = DataModuleCreate
+  OnDestroy = DataModuleDestroy
+  Height = 294
+  Width = 431
+  object Conexao: TFDConnection
+    ConnectionName = 'MySQLConnection'
+    Params.Strings = (
+      'Server=ec2-18-216-78-7.us-east-2.compute.amazonaws.com'
+      'Database=gerencial'
+      'User_Name=root'
+      'Password=i3ue98$F6TyqZ'
+      'DriverID=MySQL')
+    LoginPrompt = False
+    Left = 48
+    Top = 24
+  end
+  object Transacao: TFDTransaction
+    Connection = Conexao
+    Left = 48
+    Top = 72
+  end
+  object FDGUIxWaitCursor: TFDGUIxWaitCursor
+    Provider = 'Forms'
+    Left = 248
+    Top = 48
+  end
+  object FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink
+    VendorHome = 'C:\AusterERP\MySQL Client Libraries\32-bit'
+    Left = 136
+    Top = 40
+  end
+  object FDPhysPgDriverLink1: TFDPhysPgDriverLink
+    VendorHome = 'C:\ProjetoERP\Drivers_Pg'
+    Left = 200
+    Top = 128
+  end
+end

@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2016/04/07 10:02:00.000.727,=C:\Programas\Projetos PAF-ECF\PAF-ECF\uAjustePreco.pas</Transaction>
+    <Transaction>2016/04/07 10:02:00.000.668,=C:\Programas\Projetos PAF-ECF\PAF-ECF\uAcompanhaVenda.pas</Transaction>
+    <Transaction>2016/04/07 10:10:16.000.482,=C:\Programas\Projetos PAF-ECF\PAF-ECF\ufrmDetalhaCupom.pas</Transaction>
+    <Transaction>2016/04/07 10:23:14.000.341,C:\Programas\Projetos PAF-ECF\PAF-ECF\uFrmRelatorios.pas=</Transaction>
+    <Transaction>2016/04/07 10:23:48.000.299,C:\Programas\Projetos PAF-ECF\PAF-ECF\uFrmRelContato.pas=</Transaction>
+    <Transaction>2016/04/07 10:23:48.000.054,C:\Programas\Projetos PAF-ECF\PAF-ECF\uFrmRelTabPreco.pas=</Transaction>
+    <Transaction>2016/04/07 10:23:48.000.194,C:\Programas\Projetos PAF-ECF\PAF-ECF\uFrmRelGiroEstoque.pas=</Transaction>
+    <Transaction>2016/04/07 10:23:48.000.352,C:\Programas\Projetos PAF-ECF\PAF-ECF\uFrmRelContas.pas=</Transaction>
+    <Transaction>2016/04/07 10:23:48.000.246,C:\Programas\Projetos PAF-ECF\PAF-ECF\uFrmRelEstoque.pas=</Transaction>
+    <Transaction>2016/04/07 10:23:48.000.124,C:\Programas\Projetos PAF-ECF\PAF-ECF\uFrmRelPedido.pas=</Transaction>
+    <Transaction>2016/04/07 10:23:53.000.827,C:\Programas\Projetos PAF-ECF\PAF-ECF\uFrmRelcaixa.pas=</Transaction>
+    <Transaction>2016/04/07 10:23:53.000.773,C:\Programas\Projetos PAF-ECF\PAF-ECF\uFrmRelComissao.pas=</Transaction>
+    <Transaction>2016/04/15 10:34:02.000.900,=C:\Programas\Projetos PAF-ECF\PAF-ECF\uFrmCadPerfil.pas</Transaction>
+    <Transaction>2016/04/15 10:34:09.000.008,=C:\Programas\Projetos PAF-ECF\PAF-ECF\uFrmLancPermissoes.pas</Transaction>
+    <Transaction>2016/04/15 10:35:22.000.865,=C:\Programas\Projetos PAF-ECF\PAF-ECF\Unit1.pas</Transaction>
+    <Transaction>2016/04/21 11:24:32.000.902,=C:\Programas\Projetos PAF-ECF\PAF-ECF\uFrmRelComissao.pas</Transaction>
+    <Transaction>2016/04/21 11:24:33.000.020,=C:\Programas\Projetos PAF-ECF\PAF-ECF\uFrmRelContas.pas</Transaction>
+    <Transaction>2016/04/21 11:25:27.000.005,=C:\Programas\Projetos PAF-ECF\PAF-ECF\uFrmEtiquetas.pas</Transaction>
+    <Transaction>2016/04/21 11:26:43.000.558,=C:\Programas\Projetos PAF-ECF\PAF-ECF\uFrmMovFinanceiro.pas</Transaction>
+    <Transaction>2016/04/21 11:27:34.000.214,=C:\Programas\Projetos PAF-ECF\PAF-ECF\uFrmRelContato.pas</Transaction>
+    <Transaction>2016/04/21 11:28:02.000.100,=C:\Programas\Projetos PAF-ECF\PAF-ECF\uFrmRelatorios.pas</Transaction>
+    <Transaction>2016/04/21 11:29:05.000.332,=C:\Programas\Projetos PAF-ECF\PAF-ECF\uFrmRelGiroEstoque.pas</Transaction>
+    <Transaction>2016/04/21 11:30:21.000.308,=C:\Programas\Projetos PAF-ECF\PAF-ECF\DM\uDmRelatorios.pas</Transaction>
+    <Transaction>2016/04/21 11:38:05.000.157,=C:\Programas\Projetos PAF-ECF\PAF-ECF\Unit1.pas</Transaction>
+    <Transaction>2016/04/21 11:38:34.000.537,C:\Programas\Projetos PAF-ECF\PAF-ECF\Unit1.pas=C:\Programas\Projetos PAF-ECF\PAF-ECF\DM\uDmProdutos.pas</Transaction>
+    <Transaction>2016/04/21 11:38:34.000.537,C:\Programas\Projetos PAF-ECF\PAF-ECF\Unit1.dfm=C:\Programas\Projetos PAF-ECF\PAF-ECF\DM\uDmProdutos.dfm</Transaction>
+    <Transaction>2016/04/27 10:47:08.000.258,C:\Programas\Projetos Pessoais\Comercial\uFrmRelContato.pas=</Transaction>
+    <Transaction>2016/04/27 17:20:34.000.285,C:\Programas\Projetos Pessoais\Comercial\uFrmRelPedidos.pas=</Transaction>
+    <Transaction>2016/05/04 18:15:49.000.356,=C:\Programas\Projetos Pessoais\Comercial\Unit1.pas</Transaction>
+    <Transaction>2016/05/04 18:16:32.000.154,C:\Programas\Projetos Pessoais\Comercial\uFrmLivroLMC.pas=C:\Programas\Projetos Pessoais\Comercial\Unit1.pas</Transaction>
+    <Transaction>2016/05/04 18:16:32.000.154,C:\Programas\Projetos Pessoais\Comercial\uFrmLivroLMC.dfm=C:\Programas\Projetos Pessoais\Comercial\Unit1.dfm</Transaction>
+    <Transaction>2016/05/09 15:49:44.000.922,=C:\Programas\Projetos Pessoais\Comercial\uFrmLivroLMCProd.pas</Transaction>
+    <Transaction>2016/08/16 09:25:40.000.508,=C:\Programas\Projetos Pessoais\Comercial\Unit1.pas</Transaction>
+    <Transaction>2016/08/16 09:26:25.000.230,C:\Programas\Projetos Pessoais\Comercial\uFrmRelOrdServ.pas=C:\Programas\Projetos Pessoais\Comercial\Unit1.pas</Transaction>
+    <Transaction>2016/08/16 09:26:25.000.230,C:\Programas\Projetos Pessoais\Comercial\uFrmRelOrdServ.dfm=C:\Programas\Projetos Pessoais\Comercial\Unit1.dfm</Transaction>
+    <Transaction>2016/08/16 09:32:11.000.658,=C:\Programas\Projetos Pessoais\Comercial\Unit1.pas</Transaction>
+    <Transaction>2016/08/16 09:33:28.000.186,C:\Programas\Projetos Pessoais\Comercial\uFrmConsOrdServ.pas=C:\Programas\Projetos Pessoais\Comercial\Unit1.pas</Transaction>
+    <Transaction>2016/08/16 09:33:28.000.186,C:\Programas\Projetos Pessoais\Comercial\uFrmConsOrdServ.dfm=C:\Programas\Projetos Pessoais\Comercial\Unit1.dfm</Transaction>
+    <Transaction>2016/08/16 09:35:01.000.302,=C:\Programas\Projetos Pessoais\Comercial\Unit1.pas</Transaction>
+    <Transaction>2016/08/16 09:35:57.000.898,C:\Programas\Projetos Pessoais\Comercial\uFrmCadHorasOrdServ.dfm=C:\Programas\Projetos Pessoais\Comercial\Unit1.dfm</Transaction>
+    <Transaction>2016/08/16 09:35:57.000.898,C:\Programas\Projetos Pessoais\Comercial\uFrmCadHorasOrdServ.pas=C:\Programas\Projetos Pessoais\Comercial\Unit1.pas</Transaction>
+    <Transaction>2016/08/27 15:11:56.000.056,=C:\Programas\Projetos Pessoais\Comercial\Unit1.pas</Transaction>
+    <Transaction>2016/08/27 15:14:41.000.454,=C:\Programas\Projetos Pessoais\Comercial\Unit1.pas</Transaction>
+    <Transaction>2016/08/27 15:17:24.000.769,C:\Programas\Projetos Pessoais\Comercial\Unit1.pas=C:\Programas\Projetos Pessoais\Comercial\uFrmContas.pas</Transaction>
+    <Transaction>2016/08/27 15:17:24.000.769,C:\Programas\Projetos Pessoais\Comercial\Unit1.dfm=C:\Programas\Projetos Pessoais\Comercial\uFrmContas.dfm</Transaction>
+    <Transaction>2016/08/29 06:21:40.000.212,=C:\Programas\Projetos Pessoais\Comercial\Unit1.pas</Transaction>
+    <Transaction>2016/08/29 06:22:10.000.148,C:\Programas\Projetos Pessoais\Comercial\Unit1.dfm=C:\Programas\Projetos Pessoais\Comercial\uFrmProdutoCores.dfm</Transaction>
+    <Transaction>2016/08/29 06:22:10.000.148,C:\Programas\Projetos Pessoais\Comercial\Unit1.pas=C:\Programas\Projetos Pessoais\Comercial\uFrmProdutoCores.pas</Transaction>
+    <Transaction>2016/08/29 06:56:33.000.610,C:\Programas\Projetos Pessoais\Comercial\uFrmProdutoCores.dfm=C:\Programas\Projetos Pessoais\Comercial\uFrmProdutoTamanho.dfm</Transaction>
+    <Transaction>2016/08/29 06:56:33.000.609,C:\Programas\Projetos Pessoais\Comercial\uFrmProdutoCores.pas=C:\Programas\Projetos Pessoais\Comercial\uFrmProdutoTamanho.pas</Transaction>
+    <Transaction>2016/08/29 06:57:31.000.731,=C:\Programas\Projetos Pessoais\Comercial\uFrmProdutoCores.pas</Transaction>
+    <Transaction>2016/08/29 07:45:25.000.907,C:\Programas\Projetos Pessoais\Comercial\uFrmEstoqueLojas.pas=C:\Programas\Projetos Pessoais\Comercial\uFrmProdutoCores.pas</Transaction>
+    <Transaction>2016/08/29 07:45:25.000.907,C:\Programas\Projetos Pessoais\Comercial\uFrmEstoqueLojas.dfm=C:\Programas\Projetos Pessoais\Comercial\uFrmProdutoCores.dfm</Transaction>
+    <Transaction>2016/08/29 07:49:02.000.725,=C:\Programas\Projetos Pessoais\Comercial\uFrmProdutoCores.pas</Transaction>
+    <Transaction>2016/09/20 09:00:51.000.609,=C:\Programas\Projetos Pessoais\Comercial\Unit1.pas</Transaction>
+    <Transaction>2016/09/20 09:02:13.000.456,C:\Programas\Projetos Pessoais\Comercial\uFrameBotaoHorizontal.pas=</Transaction>
+    <Transaction>2016/09/20 09:02:26.000.222,C:\Programas\Projetos Pessoais\Comercial\uFrameBotaoHorizontal.dfm=C:\Programas\Projetos Pessoais\Comercial\Unit1.dfm</Transaction>
+    <Transaction>2016/09/20 09:02:26.000.222,C:\Programas\Projetos Pessoais\Comercial\uFrameBotaoHorizontal.pas=C:\Programas\Projetos Pessoais\Comercial\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>
