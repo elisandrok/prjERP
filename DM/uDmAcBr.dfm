@@ -415,6 +415,6 @@ object DmAcBr: TDmAcBr
     Configuracoes.WebServices.AguardarConsultaRet = 0
     Configuracoes.WebServices.QuebradeLinha = '|'
     Left = 104
-    Top = 96
+    Top = 88
   end
 end

@@ -27,7 +27,7 @@ object DmConexao: TDmConexao
     Top = 48
   end
   object MySQLDriver: TFDPhysMySQLDriverLink
-    VendorHome = 'C:\ProjetoERP\MySQL_Lib\32-bit'
+    VendorHome = 'C:\ProjetoERP\prjERP\Exec\MySQL_Lib\32-bit'
     Left = 136
     Top = 40
   end

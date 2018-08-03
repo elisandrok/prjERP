@@ -6,7 +6,7 @@ uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, uFrmCadPadrao, ExtCtrls, DBCtrls, uFrameBotaoVertical, Grids,
   DBGrids, Buttons, StdCtrls, Mask, ComCtrls, ActnList, DB, Menus, pcnAuxiliar,
-  pcnConversao, System.Actions;
+  pcnConversao,pcnConversaoNFe, System.Actions;
 
 type
   TFrmLancCompras = class(TFrmCadPadrao)

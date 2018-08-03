@@ -4,52 +4,54 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DB, QuickRpt, ExtCtrls, QRCtrls, FMTBcd, DBClient, Provider,
+  Dialogs, DB, ExtCtrls, FMTBcd, DBClient, Provider,
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
   FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
-  FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+  FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client
+  //QuickRpt, QRCtrls
+  ;
 
 type
   TFrmRelOS = class(TForm)
-    QrRelOS: TQuickRep;
-    QRBand1: TQRBand;
-    QRBandDetalhe: TQRBand;
-    QRLabel1: TQRLabel;
-    QRSysData1: TQRSysData;
-    QRSysData2: TQRSysData;
-    QrPeriodo: TQRLabel;
-    QRShape1: TQRShape;
-    QRLabel7: TQRLabel;
-    QRDBText1: TQRDBText;
-    QRDBText3: TQRDBText;
-    QRDBText4: TQRDBText;
-    QRDBText5: TQRDBText;
-    QRDBText7: TQRDBText;
-    QRGroup1: TQRGroup;
-    QRBandRodape: TQRBand;
-    QrLbGrupo: TQRLabel;
-    QRLabel10: TQRLabel;
-    QryRelOS: TFDQuery;
-    QRLabel3: TQRLabel;
-    QRLabel8: TQRLabel;
-    QRLabel12: TQRLabel;
+//    QrRelOS: TQuickRep;
+//    QRBand1: TQRBand;
+//    QRBandDetalhe: TQRBand;
+//    QRLabel1: TQRLabel;
+//    QRSysData1: TQRSysData;
+//    QRSysData2: TQRSysData;
+//    QrPeriodo: TQRLabel;
+//    QRShape1: TQRShape;
+//    QRLabel7: TQRLabel;
+//    QRDBText1: TQRDBText;
+//    QRDBText3: TQRDBText;
+//    QRDBText4: TQRDBText;
+//    QRDBText5: TQRDBText;
+//    QRDBText7: TQRDBText;
+//    QRGroup1: TQRGroup;
+//    QRBandRodape: TQRBand;
+//    QrLbGrupo: TQRLabel;
+//    QRLabel10: TQRLabel;
+//    QryRelOS: TFDQuery;
+//    QRLabel3: TQRLabel;
+//    QRLabel8: TQRLabel;
+//    QRLabel12: TQRLabel;
+//    QRDBText2: TQRDBText;
+//    QRDBText6: TQRDBText;
+//    QRDBText8: TQRDBText;
+//    QRDBText9: TQRDBText;
+//    QRLabel11: TQRLabel;
+//    QRLabel13: TQRLabel;
+//    QRLabel14: TQRLabel;
+//    QRLabel15: TQRLabel;
+//    QRLabel16: TQRLabel;
+//    QRLabel2: TQRLabel;
+//    QRLabel4: TQRLabel;
+//    QRDBText10: TQRDBText;
+//    QRLabel5: TQRLabel;
+//    QRLabel6: TQRLabel;
+//    QRDBText11: TQRDBText;
     DspRelOS: TDataSetProvider;
     CdsRelOS: TClientDataSet;
-    QRDBText2: TQRDBText;
-    QRDBText6: TQRDBText;
-    QRDBText8: TQRDBText;
-    QRDBText9: TQRDBText;
-    QRLabel11: TQRLabel;
-    QRLabel13: TQRLabel;
-    QRLabel14: TQRLabel;
-    QRLabel15: TQRLabel;
-    QRLabel16: TQRLabel;
-    QRLabel2: TQRLabel;
-    QRLabel4: TQRLabel;
-    QRDBText10: TQRDBText;
-    QRLabel5: TQRLabel;
-    QRLabel6: TQRLabel;
-    QRDBText11: TQRDBText;
     QryRelOSN_CONTROLE: TStringField;
     QryRelOSDATA_OS: TSQLTimeStampField;
     QryRelOSDATA_TRAB: TSQLTimeStampField;
@@ -80,7 +82,7 @@ type
     CdsRelOSOUTROS: TFloatField;
     CdsRelOSVALOR_PAGO: TFloatField;
     CdsRelOSSTATUS: TIntegerField;
-    procedure QRGroup1BeforePrint(Sender: TQRCustomBand; var PrintBand: Boolean);
+//    procedure QRGroup1BeforePrint(Sender: TQRCustomBand; var PrintBand: Boolean);
     procedure FormCreate(Sender: TObject);
     procedure QrVrCobradoPrint(Sender: TObject; var Value: String);
     procedure QrDescontoPrint(Sender: TObject; var Value: String);
@@ -106,18 +108,18 @@ uses
 
 {$R *.dfm}
 
-procedure TFrmRelOS.QRGroup1BeforePrint(Sender: TQRCustomBand; var PrintBand: Boolean);
-begin
-  QrLbGrupo.Caption := ZeroEsquerda(IntToStr(CdsRelOSID_CONTATO.Value), 5) + ' - ' + CdsRelOSCONTATO.Value;
-  if CdsRelOSID_CONTATO.Value <> gIDCliente then
-  begin
-    gTotalGrupo := 0;
-    gIDCliente := CdsRelOSID_CONTATO.Value;
-  end;
-  // soma total do grupo
-  gTotalGrupo := gTotalGrupo + CdsRelOSVALOR_PAGO.AsFloat;
-
-end;
+//procedure TFrmRelOS.QRGroup1BeforePrint(Sender: TQRCustomBand; var PrintBand: Boolean);
+//begin
+//  QrLbGrupo.Caption := ZeroEsquerda(IntToStr(CdsRelOSID_CONTATO.Value), 5) + ' - ' + CdsRelOSCONTATO.Value;
+//  if CdsRelOSID_CONTATO.Value <> gIDCliente then
+//  begin
+//    gTotalGrupo := 0;
+//    gIDCliente := CdsRelOSID_CONTATO.Value;
+//  end;
+//  // soma total do grupo
+//  gTotalGrupo := gTotalGrupo + CdsRelOSVALOR_PAGO.AsFloat;
+//
+//end;
 
 procedure TFrmRelOS.FormCreate(Sender: TObject);
 begin

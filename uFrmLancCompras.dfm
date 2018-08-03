@@ -7,9 +7,8 @@ inherited FrmLancCompras: TFrmLancCompras
   OldCreateOrder = True
   PopupMenu = PopupMenu1
   OnShow = FormShow
-  ExplicitTop = -137
   ExplicitWidth = 786
-  ExplicitHeight = 594
+  ExplicitHeight = 598
   PixelsPerInch = 96
   TextHeight = 13
   object PageControl1: TPageControl [0]
@@ -17,7 +16,7 @@ inherited FrmLancCompras: TFrmLancCompras
     Top = 0
     Width = 780
     Height = 569
-    ActivePage = TabSheet3
+    ActivePage = TbsTransp
     Align = alClient
     TabOrder = 0
     object TabSheet3: TTabSheet
@@ -1150,8 +1149,8 @@ inherited FrmLancCompras: TFrmLancCompras
     object TbsTransp: TTabSheet
       Caption = 'Transportadora'
       ImageIndex = 2
-      ExplicitLeft = 8
-      ExplicitTop = 28
+      ExplicitLeft = 0
+      ExplicitTop = 0
       ExplicitWidth = 0
       ExplicitHeight = 0
       object GrpTransportadora: TGroupBox
@@ -1161,10 +1160,6 @@ inherited FrmLancCompras: TFrmLancCompras
         Height = 541
         Align = alClient
         TabOrder = 0
-        ExplicitLeft = 48
-        ExplicitTop = 32
-        ExplicitWidth = 185
-        ExplicitHeight = 105
         object Label14: TLabel
           Left = 16
           Top = 58
