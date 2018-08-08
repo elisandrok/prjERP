@@ -307,6 +307,7 @@ object DmProdutos: TDmProdutos
     Top = 32
     ParamData = <
       item
+        Position = 1
         Name = 'pID'
         DataType = ftInteger
         ParamType = ptInput
@@ -905,286 +906,228 @@ object DmProdutos: TDmProdutos
         ParamType = ptInput
       end>
     ProviderName = 'DspProdutos'
-    Left = 64
+    Left = 48
     Top = 88
     object CdsProdutos2ID: TIntegerField
       FieldName = 'ID'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
     object CdsProdutos2DESCRICAO: TStringField
       FieldName = 'DESCRICAO'
-      ProviderFlags = [pfInUpdate]
       Required = True
       Size = 90
     end
     object CdsProdutos2REFERENCIA: TStringField
       FieldName = 'REFERENCIA'
-      ProviderFlags = [pfInUpdate]
     end
     object CdsProdutos2EAN13: TStringField
       FieldName = 'EAN13'
-      ProviderFlags = [pfInUpdate]
-      Size = 13
+      Size = 14
     end
     object CdsProdutos2DUN14: TStringField
       FieldName = 'DUN14'
-      ProviderFlags = [pfInUpdate]
       Size = 14
     end
     object CdsProdutos2GRUPO: TIntegerField
       FieldName = 'GRUPO'
-      ProviderFlags = [pfInUpdate]
     end
     object CdsProdutos2SUBGRUPO: TIntegerField
       FieldName = 'SUBGRUPO'
-      ProviderFlags = [pfInUpdate]
     end
     object CdsProdutos2UNIDADE: TStringField
       FieldName = 'UNIDADE'
-      ProviderFlags = [pfInUpdate]
       Size = 3
     end
     object CdsProdutos2QUANT_CAIXA: TFloatField
       FieldName = 'QUANT_CAIXA'
-      ProviderFlags = [pfInUpdate]
     end
     object CdsProdutos2ALIQUOTA_ICMS: TFloatField
       FieldName = 'ALIQUOTA_ICMS'
-      ProviderFlags = [pfInUpdate]
     end
     object CdsProdutos2ALIQUOTA_IPI: TFloatField
       FieldName = 'ALIQUOTA_IPI'
-      ProviderFlags = [pfInUpdate]
     end
     object CdsProdutos2ESTOQUE: TFloatField
       FieldName = 'ESTOQUE'
-      ProviderFlags = [pfInUpdate]
     end
     object CdsProdutos2PRECO_COMPRA: TFloatField
       FieldName = 'PRECO_COMPRA'
-      ProviderFlags = [pfInUpdate]
     end
     object CdsProdutos2PRECO_VENDA: TFloatField
       FieldName = 'PRECO_VENDA'
-      ProviderFlags = [pfInUpdate]
     end
     object CdsProdutos2TIPOPROD: TIntegerField
       FieldName = 'TIPOPROD'
-      ProviderFlags = [pfInUpdate]
     end
     object CdsProdutos2PERC_DESC: TFloatField
       FieldName = 'PERC_DESC'
-      ProviderFlags = [pfInUpdate]
     end
     object CdsProdutos2PERC_COM: TFloatField
       FieldName = 'PERC_COM'
-      ProviderFlags = [pfInUpdate]
     end
     object CdsProdutos2ATIVO: TStringField
       FieldName = 'ATIVO'
-      ProviderFlags = [pfInUpdate]
       Required = True
       FixedChar = True
       Size = 1
     end
     object CdsProdutos2TIPO_PRODUTO: TIntegerField
       FieldName = 'TIPO_PRODUTO'
-      ProviderFlags = [pfInUpdate]
     end
     object CdsProdutos2MARGEM_LUCRO: TFloatField
       FieldName = 'MARGEM_LUCRO'
-      ProviderFlags = [pfInUpdate]
     end
     object CdsProdutos2CONTROLAR_ESTOQUE: TStringField
       FieldName = 'CONTROLAR_ESTOQUE'
-      ProviderFlags = [pfInUpdate]
       FixedChar = True
       Size = 1
     end
     object CdsProdutos2TRIBUTACAO: TIntegerField
       FieldName = 'TRIBUTACAO'
-      ProviderFlags = [pfInUpdate]
     end
     object CdsProdutos2FRACIONADO: TStringField
       FieldName = 'FRACIONADO'
-      ProviderFlags = [pfInUpdate]
       FixedChar = True
       Size = 1
     end
     object CdsProdutos2CODIGO_NCM: TStringField
       FieldName = 'CODIGO_NCM'
-      ProviderFlags = [pfInUpdate]
       Required = True
       Size = 8
     end
     object CdsProdutos2REDUCAO_BASE: TFloatField
       FieldName = 'REDUCAO_BASE'
-      ProviderFlags = [pfInUpdate]
     end
     object CdsProdutos2EDITA_DESC_PED: TStringField
       FieldName = 'EDITA_DESC_PED'
-      ProviderFlags = [pfInUpdate]
       Required = True
       FixedChar = True
       Size = 1
     end
     object CdsProdutos2MD5REGISTRO: TStringField
       FieldName = 'MD5REGISTRO'
-      ProviderFlags = [pfInUpdate]
       Size = 32
     end
     object CdsProdutos2GARANTIA: TStringField
       FieldName = 'GARANTIA'
-      ProviderFlags = [pfInUpdate]
       FixedChar = True
       Size = 1
     end
     object CdsProdutos2GARANTIA_MESES: TIntegerField
       FieldName = 'GARANTIA_MESES'
-      ProviderFlags = [pfInUpdate]
     end
     object CdsProdutos2DATA_ESTOQUE: TSQLTimeStampField
       FieldName = 'DATA_ESTOQUE'
-      ProviderFlags = [pfInUpdate]
     end
     object CdsProdutos2HORA_ESTOQUE: TSQLTimeStampField
       FieldName = 'HORA_ESTOQUE'
-      ProviderFlags = [pfInUpdate]
     end
     object CdsProdutos2COMBUSTIVEL: TStringField
       FieldName = 'COMBUSTIVEL'
-      ProviderFlags = [pfInUpdate]
       FixedChar = True
       Size = 1
     end
     object CdsProdutos2IPPT: TStringField
       FieldName = 'IPPT'
-      ProviderFlags = [pfInUpdate]
       FixedChar = True
       Size = 1
     end
     object CdsProdutos2IAT: TStringField
       FieldName = 'IAT'
-      ProviderFlags = [pfInUpdate]
       FixedChar = True
       Size = 1
     end
     object CdsProdutos2MVA: TFloatField
       FieldName = 'MVA'
-      ProviderFlags = [pfInUpdate]
     end
     object CdsProdutos2ALIQUOTA_PIS: TFloatField
       FieldName = 'ALIQUOTA_PIS'
-      ProviderFlags = [pfInUpdate]
     end
     object CdsProdutos2ALIQUOTA_COFINS: TFloatField
       FieldName = 'ALIQUOTA_COFINS'
-      ProviderFlags = [pfInUpdate]
     end
     object CdsProdutos2SINCRONIZADO: TStringField
       FieldName = 'SINCRONIZADO'
-      ProviderFlags = [pfInUpdate]
       FixedChar = True
       Size = 1
     end
     object CdsProdutos2EXCECAO_NCM: TIntegerField
       FieldName = 'EXCECAO_NCM'
-      ProviderFlags = [pfInUpdate]
     end
     object CdsProdutos2INDICEA: TStringField
       FieldName = 'INDICEA'
-      ProviderFlags = [pfInUpdate]
       Size = 4
     end
     object CdsProdutos2CST_INTERNO: TStringField
       FieldName = 'CST_INTERNO'
-      ProviderFlags = [pfInUpdate]
       Size = 3
     end
     object CdsProdutos2CFOP_INTERNO: TStringField
       FieldName = 'CFOP_INTERNO'
-      ProviderFlags = [pfInUpdate]
       Size = 4
     end
     object CdsProdutos2BENS_CONSUMO: TStringField
       FieldName = 'BENS_CONSUMO'
-      ProviderFlags = [pfInUpdate]
       Required = True
       FixedChar = True
       Size = 1
     end
     object CdsProdutos2PROD_COMPONENTE: TStringField
       FieldName = 'PROD_COMPONENTE'
-      ProviderFlags = [pfInUpdate]
       Required = True
       FixedChar = True
       Size = 1
     end
     object CdsProdutos2IDPRODPRINCIPAL: TIntegerField
       FieldName = 'IDPRODPRINCIPAL'
-      ProviderFlags = [pfInUpdate]
     end
     object CdsProdutos2PROD_FINALIDADE: TStringField
       FieldName = 'PROD_FINALIDADE'
-      ProviderFlags = [pfInUpdate]
       Size = 250
     end
     object CdsProdutos2VIDAUTIL_MESES: TIntegerField
       FieldName = 'VIDAUTIL_MESES'
-      ProviderFlags = [pfInUpdate]
     end
     object CdsProdutos2COD_CEST: TStringField
       FieldName = 'COD_CEST'
-      ProviderFlags = [pfInUpdate]
       Size = 7
     end
     object CdsProdutos2PESAVEL: TStringField
       FieldName = 'PESAVEL'
-      ProviderFlags = [pfInUpdate]
       FixedChar = True
       Size = 1
     end
     object CdsProdutos2CST_PIS: TStringField
       FieldName = 'CST_PIS'
-      ProviderFlags = [pfInUpdate]
       FixedChar = True
       Size = 2
     end
     object CdsProdutos2CST_COFINS: TStringField
       FieldName = 'CST_COFINS'
-      ProviderFlags = [pfInUpdate]
       FixedChar = True
       Size = 2
     end
     object CdsProdutos2DT_INI_PROMO: TDateField
       FieldName = 'DT_INI_PROMO'
-      ProviderFlags = [pfInUpdate]
     end
     object CdsProdutos2DT_FIM_PROMO: TDateField
       FieldName = 'DT_FIM_PROMO'
-      ProviderFlags = [pfInUpdate]
     end
     object CdsProdutos2PRECO_PROMOCAO: TFloatField
       FieldName = 'PRECO_PROMOCAO'
-      ProviderFlags = [pfInUpdate]
     end
     object CdsProdutos2ID_COR: TIntegerField
       FieldName = 'ID_COR'
-      ProviderFlags = [pfInUpdate]
     end
     object CdsProdutos2ID_TAMANHO: TIntegerField
       FieldName = 'ID_TAMANHO'
-      ProviderFlags = [pfInUpdate]
     end
     object CdsProdutos2PATH_IMAGEM: TStringField
       FieldName = 'PATH_IMAGEM'
-      ProviderFlags = [pfInUpdate]
       Size = 512
     end
     object CdsProdutos2CSOSN_INTERNO: TStringField
       FieldName = 'CSOSN_INTERNO'
-      ProviderFlags = [pfInUpdate]
       FixedChar = True
       Size = 3
     end
@@ -1631,28 +1574,30 @@ object DmProdutos: TDmProdutos
     Connection = DmConexao.Conexao
     SQL.Strings = (
       'select * from grupo'
-      'order by grupo.descricao')
+      'order by grupo.grupo_descricao')
     Left = 504
     Top = 160
-    object QryGrupoID: TIntegerField
-      FieldName = 'ID'
+    object QryGrupoGRUPO_ID: TIntegerField
+      FieldName = 'GRUPO_ID'
+      Origin = 'GRUPO_ID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object QryGrupoDESCRICAO: TStringField
-      FieldName = 'DESCRICAO'
-      ProviderFlags = [pfInUpdate]
+    object QryGrupoGRUPO_DESCRICAO: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'GRUPO_DESCRICAO'
+      Origin = 'GRUPO_DESCRICAO'
     end
     object QryGrupoATIVO: TStringField
       FieldName = 'ATIVO'
-      ProviderFlags = [pfInUpdate]
+      Origin = 'ATIVO'
       Required = True
       FixedChar = True
       Size = 1
     end
     object QryGrupoATIVO_VENDA: TStringField
       FieldName = 'ATIVO_VENDA'
-      ProviderFlags = [pfInUpdate]
+      Origin = 'ATIVO_VENDA'
       Required = True
       FixedChar = True
       Size = 1
@@ -1719,25 +1664,26 @@ object DmProdutos: TDmProdutos
     OnNewRecord = CdsGrupoNewRecord
     Left = 504
     Top = 200
-    object CdsGrupoID: TIntegerField
-      FieldName = 'ID'
+    object CdsGrupoGRUPO_ID: TIntegerField
+      FieldName = 'GRUPO_ID'
+      Origin = 'GRUPO_ID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object CdsGrupoDESCRICAO: TStringField
-      FieldName = 'DESCRICAO'
-      ProviderFlags = [pfInUpdate]
+    object CdsGrupoGRUPO_DESCRICAO: TStringField
+      FieldName = 'GRUPO_DESCRICAO'
+      Origin = 'GRUPO_DESCRICAO'
     end
     object CdsGrupoATIVO: TStringField
       FieldName = 'ATIVO'
-      ProviderFlags = [pfInUpdate]
+      Origin = 'ATIVO'
       Required = True
       FixedChar = True
       Size = 1
     end
     object CdsGrupoATIVO_VENDA: TStringField
       FieldName = 'ATIVO_VENDA'
-      ProviderFlags = [pfInUpdate]
+      Origin = 'ATIVO_VENDA'
       Required = True
       FixedChar = True
       Size = 1

@@ -45,10 +45,10 @@ inherited FrmCadGrupo: TFrmCadGrupo
         end
         object DbID: TDBEdit
           Left = 12
-          Top = 30
+          Top = 27
           Width = 134
           Height = 21
-          DataField = 'ID'
+          DataField = 'GRUPO_ID'
           DataSource = DataWork
           Enabled = False
           TabOrder = 0
@@ -56,11 +56,11 @@ inherited FrmCadGrupo: TFrmCadGrupo
         end
         object DbDescricao: TDBEdit
           Left = 12
-          Top = 70
+          Top = 67
           Width = 264
           Height = 21
           CharCase = ecUpperCase
-          DataField = 'DESCRICAO'
+          DataField = 'GRUPO_DESCRICAO'
           DataSource = DataWork
           TabOrder = 1
           OnKeyPress = DbIDKeyPress
@@ -79,8 +79,8 @@ inherited FrmCadGrupo: TFrmCadGrupo
           OnKeyPress = DbIDKeyPress
         end
         object DBGrid2: TDBGrid
-          Left = 5
-          Top = 119
+          Left = 6
+          Top = 120
           Width = 320
           Height = 152
           DataSource = DataWork
@@ -95,7 +95,7 @@ inherited FrmCadGrupo: TFrmCadGrupo
           Columns = <
             item
               Expanded = False
-              FieldName = 'DESCRICAO'
+              FieldName = 'GRUPO_DESCRICAO'
               Title.Alignment = taCenter
               Title.Caption = 'Descri'#231#227'o'
               Width = 187
@@ -327,7 +327,7 @@ inherited FrmCadGrupo: TFrmCadGrupo
           Top = 16
           Width = 249
           Height = 21
-          DataField = 'DESCRICAO'
+          DataField = 'GRUPO_DESCRICAO'
           DataSource = DataWork
           Enabled = False
           TabOrder = 0
@@ -358,7 +358,7 @@ inherited FrmCadGrupo: TFrmCadGrupo
     Left = 224
   end
   object DataSubGrupo: TDataSource
-    Left = 244
-    Top = 104
+    Left = 388
+    Top = 48
   end
 end

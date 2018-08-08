@@ -7,7 +7,23 @@ uses
   Dialogs, Menus, ActnList, Buttons, ExtCtrls, ComCtrls, ImgList, StdCtrls,
   ToolWin, jpeg, ShellAPI, System.Actions, System.UITypes,
   Vcl.PlatformDefaultStyleActnCtrls, Vcl.ActnMan, Vcl.ActnCtrls, Vcl.ActnMenus,
-  uMensagem, System.ImageList;
+  uMensagem, System.ImageList, cxGraphics, cxControls, cxLookAndFeels,
+  cxLookAndFeelPainters, dxRibbonSkins, dxSkinsCore, dxSkinBlack, dxSkinBlue,
+  dxSkinBlueprint, dxSkinCaramel, dxSkinCoffee, dxSkinDarkRoom, dxSkinDarkSide,
+  dxSkinDevExpressDarkStyle, dxSkinDevExpressStyle, dxSkinFoggy,
+  dxSkinGlassOceans, dxSkinHighContrast, dxSkiniMaginary, dxSkinLilian,
+  dxSkinLiquidSky, dxSkinLondonLiquidSky, dxSkinMcSkin, dxSkinMetropolis,
+  dxSkinMetropolisDark, dxSkinMoneyTwins, dxSkinOffice2007Black,
+  dxSkinOffice2007Blue, dxSkinOffice2007Green, dxSkinOffice2007Pink,
+  dxSkinOffice2007Silver, dxSkinOffice2010Black, dxSkinOffice2010Blue,
+  dxSkinOffice2010Silver, dxSkinOffice2013DarkGray, dxSkinOffice2013LightGray,
+  dxSkinOffice2013White, dxSkinOffice2016Colorful, dxSkinOffice2016Dark,
+  dxSkinPumpkin, dxSkinSeven, dxSkinSevenClassic, dxSkinSharp, dxSkinSharpPlus,
+  dxSkinSilver, dxSkinSpringTime, dxSkinStardust, dxSkinSummer2008,
+  dxSkinTheAsphaltWorld, dxSkinsDefaultPainters, dxSkinValentine,
+  dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark,
+  dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinWhiteprint,
+  dxSkinXmas2008Blue, dxRibbonCustomizationForm, cxClasses, dxBar, dxRibbon;
 
 type
   TFrmMenu = class(TForm)
@@ -24,93 +40,84 @@ type
     ActCaixa: TAction;
     ActEntradas: TAction;
     Timer1: TTimer;
-    MainMenu1: TMainMenu;
-    Cadastro1: TMenuItem;
-    CadastrodeClientes1: TMenuItem;
-    CadastrodeProdutos1: TMenuItem;
-    CadastrodeFuncionarios1: TMenuItem;
-    CadastrodeContabilidade1: TMenuItem;
-    CadastrodePontosdeVenda1: TMenuItem;
-    PostodeCombustivel1: TMenuItem;
-    OpesdePosto1: TMenuItem;
-    CadastrodeCombustivel1: TMenuItem;
-    CadastrodeBomba1: TMenuItem;
-    CadastrodeTanque1: TMenuItem;
-    CentrodeCusto1: TMenuItem;
-    PlanosdeContas1: TMenuItem;
-    CadastrodeProdutos2: TMenuItem;
-    GruposeSubGrupos1: TMenuItem;
-    AtualizarTabeladePreos71: TMenuItem;
-    FechamentodeEstoque1: TMenuItem;
-    GravaFechamentoInicial1: TMenuItem;
-    Movimentao1: TMenuItem;
-    Cadastro2: TMenuItem;
-    CadastrarFormasdePagamento1: TMenuItem;
-    CadastrarClassificaodeSada1: TMenuItem;
-    PedidoseOramentos1: TMenuItem;
-    CompradeMercadorias1: TMenuItem;
-    EmissoSrieD11: TMenuItem;
-    Financeira1: TMenuItem;
-    ContasaPagar1: TMenuItem;
-    ContasaReceber1: TMenuItem;
-    MovimentodeCaixa1: TMenuItem;
-    ControledeCheques1: TMenuItem;
-    Servios1: TMenuItem;
-    OrdemdeServio1: TMenuItem;
-    Relatrios1: TMenuItem;
-    Utilitarios1: TMenuItem;
-    Geral1: TMenuItem;
-    Configurao1: TMenuItem;
-    AgendadeCompromisso1: TMenuItem;
-    CadastrodeReduesZ1: TMenuItem;
-    Sintegra1: TMenuItem;
-    SEF21: TMenuItem;
-    Usurios1: TMenuItem;
-    CadastrodeUsuarios1: TMenuItem;
-    rocadeUsuarios1: TMenuItem;
-    SobreoAplicativo1: TMenuItem;
-    Sair1: TMenuItem;
     actCadUsuario: TAction;
     actCadFunc: TAction;
-    pnlToolBar1: TPanel;
     actAjustePreco: TAction;
-    btnActProdutos: TBitBtn;
-    btnAjustePreco: TBitBtn;
-    btnCadUsuario: TBitBtn;
-    btnCadFunc: TBitBtn;
-    btnActContasRc: TBitBtn;
-    btnActContasPg: TBitBtn;
-    btnActClientes: TBitBtn;
-    btnActPedidos: TBitBtn;
-    btnActEncerrar: TBitBtn;
-    btnActCaixa: TBitBtn;
-    CadastrodeComposies1: TMenuItem;
     actCadComposicao: TAction;
-    CadastrodeFornecedores1: TMenuItem;
-    GeradorSPEDFiscaleConstrinuies1: TMenuItem;
-    Acompanhamentodevendas1: TMenuItem;
     ActionManager1: TActionManager;
-    RelatoriosemGeral1: TMenuItem;
-    RelatoriodeVendaseComisses1: TMenuItem;
-    Etiquetasdepostagem1: TMenuItem;
-    Produtos1: TMenuItem;
-    GirodeProdutos1: TMenuItem;
-    ListadeCompras1: TMenuItem;
-    Financeiro1: TMenuItem;
-    Contaapagarereceber1: TMenuItem;
-    MovimentaodeCaixaDirio1: TMenuItem;
-    ResultadoFinanceirodoPerodo1: TMenuItem;
-    MovimentodeMercadorias1: TMenuItem;
-    CurvaABC1: TMenuItem;
-    Movimentodeestoque1: TMenuItem;
-    RegistrodeEntrada1: TMenuItem;
-    RegistrodeSada1: TMenuItem;
-    Scribes1: TMenuItem;
-    LivrodemovimentaodecombustvelLMC1: TMenuItem;
-    N1: TMenuItem;
-    LivrodemovimentaodecombustvelLMC2: TMenuItem;
     ImgLogo: TImage;
-    ImportardadosV151: TMenuItem;
+    dxRibbon1Tab1: TdxRibbonTab;
+    dxRibbon1: TdxRibbon;
+    dxBarManager1: TdxBarManager;
+    dxBarManager1Bar1: TdxBar;
+    dxBarLargeButton1: TdxBarLargeButton;
+    dxBarLargeButton2: TdxBarLargeButton;
+    dxBarManager1Bar2: TdxBar;
+    dxBarSubItem1: TdxBarSubItem;
+    dxBarButton1: TdxBarButton;
+    dxBarButton2: TdxBarButton;
+    dxBarButton3: TdxBarButton;
+    dxBarButton4: TdxBarButton;
+    dxBarButton5: TdxBarButton;
+    dxBarLargeButton3: TdxBarLargeButton;
+    dxBarLargeButton4: TdxBarLargeButton;
+    dxBarButton6: TdxBarButton;
+    dxBarButton7: TdxBarButton;
+    dxBarManager1Bar3: TdxBar;
+    dxBarLargeButton5: TdxBarLargeButton;
+    dxBarLargeButton6: TdxBarLargeButton;
+    dxBarLargeButton7: TdxBarLargeButton;
+    dxRibbon1Tab2: TdxRibbonTab;
+    dxRibbon1Tab3: TdxRibbonTab;
+    dxRibbon1Tab4: TdxRibbonTab;
+    dxRibbon1Tab5: TdxRibbonTab;
+    dxBarManager1Bar4: TdxBar;
+    dxBarLargeButton8: TdxBarLargeButton;
+    dxBarButton8: TdxBarButton;
+    dxBarButton9: TdxBarButton;
+    dxBarManager1Bar5: TdxBar;
+    dxBarLargeButton9: TdxBarLargeButton;
+    dxBarLargeButton10: TdxBarLargeButton;
+    dxBarLargeButton11: TdxBarLargeButton;
+    dxBarManager1Bar6: TdxBar;
+    dxBarButton10: TdxBarButton;
+    dxBarLargeButton12: TdxBarLargeButton;
+    dxBarManager1Bar7: TdxBar;
+    dxBarLargeButton13: TdxBarLargeButton;
+    dxBarManager1Bar8: TdxBar;
+    dxBarLargeButton14: TdxBarLargeButton;
+    dxBarManager1Bar9: TdxBar;
+    dxBarLargeButton15: TdxBarLargeButton;
+    dxBarLargeButton16: TdxBarLargeButton;
+    dxBarManager1Bar10: TdxBar;
+    dxBarLargeButton17: TdxBarLargeButton;
+    dxBarManager1Bar11: TdxBar;
+    dxBarLargeButton18: TdxBarLargeButton;
+    dxBarManager1Bar12: TdxBar;
+    dxBarButton11: TdxBarButton;
+    dxBarButton12: TdxBarButton;
+    dxBarManager1Bar13: TdxBar;
+    dxBarButton13: TdxBarButton;
+    dxBarButton14: TdxBarButton;
+    dxBarButton15: TdxBarButton;
+    dxBarLargeButton19: TdxBarLargeButton;
+    dxBarButton16: TdxBarButton;
+    dxBarButton17: TdxBarButton;
+    dxBarButton18: TdxBarButton;
+    dxBarManager1Bar14: TdxBar;
+    dxBarLargeButton20: TdxBarLargeButton;
+    dxBarLargeButton21: TdxBarLargeButton;
+    dxBarManager1Bar15: TdxBar;
+    dxBarButton19: TdxBarButton;
+    dxBarButton20: TdxBarButton;
+    dxBarManager1Bar16: TdxBar;
+    dxBarLargeButton22: TdxBarLargeButton;
+    dxBarLargeButton23: TdxBarLargeButton;
+    dxBarLargeButton24: TdxBarLargeButton;
+    dxBarLargeButton25: TdxBarLargeButton;
+    dxBarLargeButton26: TdxBarLargeButton;
+    dxBarManager1Bar17: TdxBar;
+    dxBarLargeButton27: TdxBarLargeButton;
     procedure ActClientesExecute(Sender: TObject);
     procedure ActAgendaExecute(Sender: TObject);
     procedure ActEncerrarExecute(Sender: TObject);
@@ -197,6 +204,40 @@ type
     procedure Scribes1Click(Sender: TObject);
     procedure LivrodemovimentaodecombustvelLMC2Click(Sender: TObject);
     procedure ImportardadosV151Click(Sender: TObject);
+    procedure dxBarLargeButton1Click(Sender: TObject);
+    procedure dxBarLargeButton2Click(Sender: TObject);
+    procedure dxBarLargeButton4Click(Sender: TObject);
+    procedure dxBarButton6Click(Sender: TObject);
+    procedure dxBarButton7Click(Sender: TObject);
+    procedure dxBarLargeButton5Click(Sender: TObject);
+    procedure dxBarLargeButton6Click(Sender: TObject);
+    procedure dxBarLargeButton7Click(Sender: TObject);
+    procedure dxBarButton8Click(Sender: TObject);
+    procedure dxBarButton9Click(Sender: TObject);
+    procedure dxBarLargeButton9Click(Sender: TObject);
+    procedure dxBarLargeButton10Click(Sender: TObject);
+    procedure dxBarLargeButton11Click(Sender: TObject);
+    procedure dxBarLargeButton12Click(Sender: TObject);
+    procedure dxBarLargeButton13Click(Sender: TObject);
+    procedure dxBarLargeButton14Click(Sender: TObject);
+    procedure dxBarLargeButton15Click(Sender: TObject);
+    procedure dxBarLargeButton16Click(Sender: TObject);
+    procedure dxBarLargeButton17Click(Sender: TObject);
+    procedure dxBarLargeButton18Click(Sender: TObject);
+    procedure dxBarButton11Click(Sender: TObject);
+    procedure dxBarButton13Click(Sender: TObject);
+    procedure dxBarButton14Click(Sender: TObject);
+    procedure dxBarButton15Click(Sender: TObject);
+    procedure dxBarLargeButton27Click(Sender: TObject);
+    procedure dxBarButton19Click(Sender: TObject);
+    procedure dxBarButton20Click(Sender: TObject);
+    procedure dxBarLargeButton20Click(Sender: TObject);
+    procedure dxBarLargeButton21Click(Sender: TObject);
+    procedure dxBarLargeButton22Click(Sender: TObject);
+    procedure dxBarLargeButton23Click(Sender: TObject);
+    procedure dxBarLargeButton24Click(Sender: TObject);
+    procedure dxBarLargeButton25Click(Sender: TObject);
+    procedure dxBarLargeButton26Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -517,7 +558,7 @@ begin
   // cadastra itens do aplicativo
   if not DmClientes.Dados_UsuariosItens(sNomeApp) then
   begin
-    DmClientes.Grava_ItemsMenu(MainMenu1);
+//    DmClientes.Grava_ItemsMenu(MainMenu1);
   end;
   // verifica perfil
   if not DmClientes.Dados_Perfil then
@@ -751,6 +792,260 @@ end;
 procedure TFrmMenu.ControledeCheques1Click(Sender: TObject);
 begin
   AbreForm(TFrmCadCheques, FrmCadCheques);
+end;
+
+procedure TFrmMenu.dxBarButton11Click(Sender: TObject);
+begin
+  AbreForm(TFrmRelGiroEstoque, FrmRelGiroEstoque);
+end;
+
+procedure TFrmMenu.dxBarButton13Click(Sender: TObject);
+begin
+  AbreForm(TFrmRelContas, FrmRelContas);
+end;
+
+procedure TFrmMenu.dxBarButton14Click(Sender: TObject);
+begin
+  AbreForm(TFrmSelMovCaixa, FrmSelMovCaixa);
+end;
+
+procedure TFrmMenu.dxBarButton15Click(Sender: TObject);
+begin
+  AbreForm(TFrmMovFinanceiro, FrmMovFinanceiro);
+end;
+
+procedure TFrmMenu.dxBarButton19Click(Sender: TObject);
+begin
+  Application.CreateForm(TFrmConfiguracoes, FrmConfiguracoes);
+  try
+    FrmConfiguracoes.sControle := 0;
+    FrmConfiguracoes.showmodal;
+  finally
+    FrmConfiguracoes.Destroy;
+    DmWorkCom.Dados_Empresa(sIDEmpresa);
+    CarregarConfiguracao;
+    StatusBar1.Panels.Items[3].Text := DmWorkCom.CdsEmpresaRAZAO_SOCIAL.AsString;
+    DmWorkCom.CarregaDadosEmpresa;
+  end;
+end;
+
+procedure TFrmMenu.dxBarButton20Click(Sender: TObject);
+begin
+  ActAgendaExecute(Sender);
+end;
+
+procedure TFrmMenu.dxBarButton6Click(Sender: TObject);
+begin
+  AbreForm(TFrmCadGrupo, FrmCadGrupo);
+end;
+
+procedure TFrmMenu.dxBarButton7Click(Sender: TObject);
+begin
+  AbreForm(TFrmProdComposto, FrmProdComposto);
+end;
+
+procedure TFrmMenu.dxBarButton8Click(Sender: TObject);
+begin
+  Application.CreateForm(TFrmCadClassPedido, FrmCadClassPedido);
+  try
+    FrmCadClassPedido.showmodal;
+  finally
+    FrmCadClassPedido.Destroy;
+  end;
+end;
+
+procedure TFrmMenu.dxBarButton9Click(Sender: TObject);
+begin
+  AbreForm(TFrmCadFormaPag, FrmCadFormaPag);
+end;
+
+procedure TFrmMenu.dxBarLargeButton10Click(Sender: TObject);
+begin
+  // Lancamento de Compras de mercadorias
+  Application.CreateForm(TFrmLancCompras, FrmLancCompras);
+  Application.CreateForm(TFrmCadClassPedido, FrmCadClassPedido);
+  Application.CreateForm(TFrmCadFormaPag, FrmCadFormaPag);
+  Application.CreateForm(TFrmLancItensCompra, FrmLancItensCompra);
+  Application.CreateForm(TFrmComprasConsulta, FrmComprasConsulta);
+  Application.CreateForm(TfrmProdutos, FrmProdutos);
+  try
+    FrmLancCompras.showmodal;
+  finally
+    FrmProdutos.Destroy;
+    FrmComprasConsulta.Destroy;
+    FrmLancItensCompra.Destroy;
+    FrmCadClassPedido.Destroy;
+    FrmCadFormaPag.Destroy;
+    FrmLancCompras.Destroy;
+  end;
+end;
+
+procedure TFrmMenu.dxBarLargeButton11Click(Sender: TObject);
+begin
+  AbreForm(TfrmAcompanhaVenda, frmAcompanhaVenda);
+end;
+
+procedure TFrmMenu.dxBarLargeButton12Click(Sender: TObject);
+begin
+  try
+    Application.CreateForm(TFrmClientes, FrmClientes);
+    Application.CreateForm(TFrmCadOS, FrmCadOS);
+    FrmCadOS.showmodal;
+  finally
+    FrmCadOS.Free;
+    FrmClientes.Free;
+  end;
+
+end;
+
+procedure TFrmMenu.dxBarLargeButton13Click(Sender: TObject);
+begin
+  ActContasPgExecute(Sender);
+end;
+
+procedure TFrmMenu.dxBarLargeButton14Click(Sender: TObject);
+begin
+  ActContasRcExecute(Sender);
+end;
+
+procedure TFrmMenu.dxBarLargeButton15Click(Sender: TObject);
+begin
+  AbreForm(TFrmCaixaDiario, FrmCaixaDiario);
+end;
+
+procedure TFrmMenu.dxBarLargeButton16Click(Sender: TObject);
+begin
+  AbreForm(TFrmCadCheques, FrmCadCheques);
+end;
+
+procedure TFrmMenu.dxBarLargeButton17Click(Sender: TObject);
+begin
+  Application.CreateForm(TFrmRelatorios, FrmRelatorios);
+  try
+    FrmRelatorios.showmodal;
+  finally
+    FreeAndNil(FrmRelatorios);
+  end
+end;
+
+procedure TFrmMenu.dxBarLargeButton18Click(Sender: TObject);
+begin
+  AbreForm(TFrmRelComissao, FrmRelComissao);
+end;
+
+procedure TFrmMenu.dxBarLargeButton1Click(Sender: TObject);
+begin
+  ActClientesExecute(Sender);
+end;
+
+procedure TFrmMenu.dxBarLargeButton20Click(Sender: TObject);
+begin
+  AbreForm(TFrmCadUsuarios, FrmCadUsuarios);
+end;
+
+procedure TFrmMenu.dxBarLargeButton21Click(Sender: TObject);
+begin
+  Timer1.Enabled := true;
+end;
+
+procedure TFrmMenu.dxBarLargeButton22Click(Sender: TObject);
+begin
+  try
+    Application.CreateForm(TFrmSPED, FrmSPED);
+    FrmSPED.showmodal;
+  finally
+    FreeAndNil(FrmSPED);
+  end;
+end;
+
+procedure TFrmMenu.dxBarLargeButton23Click(Sender: TObject);
+begin
+  AbreForm(TFrmCadRegistro60, FrmCadRegistro60);
+end;
+
+procedure TFrmMenu.dxBarLargeButton24Click(Sender: TObject);
+begin
+  AbreForm(TFrmSintegra, FrmSintegra);
+end;
+
+procedure TFrmMenu.dxBarLargeButton25Click(Sender: TObject);
+begin
+  AbreForm(TFrmSEF2, FrmSEF2);
+end;
+
+procedure TFrmMenu.dxBarLargeButton26Click(Sender: TObject);
+var
+  formMensagem: TFormMensagem;
+begin
+  if Confirmacao('Confirma a importação dos dados V15?') then
+  begin
+    try
+      formMensagem := TFormMensagem.Create('Aguarde... Importando os dados V15!', 550, 150, clWhite, clSilver);
+      formMensagem.mostrar;
+      Refresh;
+      DmProdutos.ProcessaImportacaoProdutosSISCOM;
+    finally
+      formMensagem.destruir;
+      FreeAndNil(formMensagem);
+      ShowMessage('Processo concluído com sucesso!');
+    end;
+  end;
+end;
+
+procedure TFrmMenu.dxBarLargeButton27Click(Sender: TObject);
+begin
+  AbreForm(TFrmImforma, FrmImforma);
+end;
+
+procedure TFrmMenu.dxBarLargeButton2Click(Sender: TObject);
+begin
+  Application.CreateForm(TFrmClientes, FrmClientes);
+  try
+    FrmClientes.showmodal;
+  finally
+    FrmClientes.Destroy;
+  end;
+end;
+
+procedure TFrmMenu.dxBarLargeButton4Click(Sender: TObject);
+begin
+  AbreForm(TfrmProdutos, FrmProdutos);
+end;
+
+procedure TFrmMenu.dxBarLargeButton5Click(Sender: TObject);
+begin
+  AbreForm(TFrmCadContabil, FrmCadContabil);
+end;
+
+procedure TFrmMenu.dxBarLargeButton6Click(Sender: TObject);
+begin
+  AbreForm(TFrmCadCCusto, FrmCadCCusto);
+end;
+
+procedure TFrmMenu.dxBarLargeButton7Click(Sender: TObject);
+begin
+  AbreForm(TFrmCadPlanoConta, FrmCadPlanoConta);
+end;
+
+procedure TFrmMenu.dxBarLargeButton9Click(Sender: TObject);
+begin
+  // Lancamento de Encomendas
+  Application.CreateForm(TFrmClientes, FrmClientes);
+  Application.CreateForm(TFrmCadClassPedido, FrmCadClassPedido);
+  Application.CreateForm(TFrmCadFormaPag, FrmCadFormaPag);
+  Application.CreateForm(TFrmPedidosConsulta, FrmPedidosConsulta);
+  Application.CreateForm(TfrmProdutos, FrmProdutos);
+  Application.CreateForm(TFrmLancPedidos, FrmLancPedidos);
+  try
+    FrmLancPedidos.showmodal;
+  finally
+    FrmLancPedidos.Destroy;
+    FrmProdutos.Destroy;
+    FrmPedidosConsulta.Destroy;
+    FrmCadFormaPag.Destroy;
+    FrmCadClassPedido.Destroy;
+    FrmClientes.Destroy;
+  end;
 end;
 
 procedure TFrmMenu.Sair1Click(Sender: TObject);

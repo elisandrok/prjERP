@@ -73,7 +73,7 @@ procedure TFrmCadGrupo.TabSheet2Enter(Sender: TObject);
 begin
   inherited;
   if DataWork.DataSet.RecordCount > 0 then
-    DmProdutos.Dados_SubGrupo(DataWork.DataSet.FieldByname('ID').AsInteger);
+    DmProdutos.Dados_SubGrupo(DataWork.DataSet.FieldByname('GRUPO_ID').AsInteger);
 
 end;
 
